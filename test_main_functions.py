@@ -1,20 +1,20 @@
 import pandas as pd
-from main import load_data, count_gender , annual_salary, get_employees_RRHH
+from main import DataLoader, EmployeeHandler
 from config import FILE_NAME
 
-def test_load_data(): 
-    data_frame = load_data(FILE_NAME)    
-    #Verify output is a DataFrame
-    assert isinstance(data_frame, pd.DataFrame)
+def test_load_data():
+    data_loader = DataLoader(FILE_NAME)
+    data_f = data_loader.load_data()
+    assert isinstance(data_f, pd.DataFrame)
 
-def test_count() :
+def test_count_gender():
     data = {
-        'sexo': ['H', 'H', 'H', 'M', 'M', 'M', 'H','M','H']
+        'sexo': ['H', 'H', 'H', 'M', 'M', 'M', 'H', 'M', 'H']
     }
-    data_frame = pd.DataFrame(data)
-    output = (5,4) #Number Men, number Woman
-    result = count_gender(data_frame)    
-    assert result == output
+    data_f = pd.DataFrame(data)
+    employee_handler = EmployeeHandler(data_f)
+    result = employee_handler.count_gender()
+    assert result == (5, 4)
 
 def test_annual_salary():
     data = {
@@ -23,6 +23,7 @@ def test_annual_salary():
         'salario bruto anual': [21000, 22000, 24000, 25333]
     }
     data_f = pd.DataFrame(data)
-    total_expected = 49333  #(24000 + 25333) Sum of the expected gross annual salaries of employees from Alovera
-    result = annual_salary(data_f)
+    employee_handler = EmployeeHandler(data_f)
+    total_expected = 49333
+    result = employee_handler.annual_salary()
     assert result == total_expected
