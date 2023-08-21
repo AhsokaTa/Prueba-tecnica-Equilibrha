@@ -1,16 +1,51 @@
-# H1
-Prueba técnica Equilibrha
-=========================
+# Prueba Técnica Equilibrha
 
-Dado un fichero Excel o CSV, hacer un programa que lea el fichero de datos de empleados y se cargue de forma correcta en un modelo en memoria.
-Una vez cargado en memoria indicar por consola:
-1. Indicar cuantos hombre y mujeres hay del total de empleado.
-2. Indica la suma el salario bruto anual de los empleados de la empresa 1 (Equilibra IT) y el centro de trabajo CT2 (Alovera)
-3. Imprime un listado de empleados (id empleado, nombre, apellidos, salario y empresa) de los empleados que cobren más de 28000 euros y que pertenezcan a la empresa 2 (Equilibra RRHH)
+Este programa procesa un archivo CSV que contiene datos de empleados. Una vez cargados los datos en memoria realiza operaciones sobre ellos.
 
-# Installation
-- Create a Python environment and execute the command
-```
-pip install -r requirements.txt
-```
+## Funcionalidades
+
+1. **Conteo de Género:**
+   El programa cuenta la cantidad de hombres y mujeres entre los empleados totales.
+
+2. **Suma de Salarios (Empresa 1, Centro de Trabajo CT2):**
+   Calcula la suma del salario bruto anual de los empleados de la empresa 1 (Equilibra IT) y el centro de trabajo CT2 (Alovera).
+
+3. **Listado de Empleados Relevantes (Empresa 2, Salario > 28000):**
+   Imprime un listado de empleados que cobren más de 28000 euros y pertenezcan a la empresa 2 (Equilibra RRHH). Muestra su ID, nombre, apellidos, salario y empresa.
+
+## Instalación de Dependencias
+
+### Windows
+
+1. Crea un entorno de Python:
+    ```
+    python -m venv environment
+    ```
+
+2. Activa el entorno:
+    ```
+    environment\Scripts\activate
+    ```
+
+3. Instala los requisitos:
+    ```
+    pip install -r requirements.txt
+    ```
+
+### macOS y Linux
+
+1. Crea un entorno de Python:
+    ```
+    python -m venv environment
+    ```
+
+2. Activa el entorno:
+    ```
+    source entorno/bin/activate
+    ```
+
+3. Instala los requisitos:
+    ```
+    pip install -r requirements.txt
+    ```
 
