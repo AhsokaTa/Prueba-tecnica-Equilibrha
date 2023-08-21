@@ -53,3 +53,9 @@ This program processes a CSV file containing employee data. Once the data is loa
 ```
 python3 main.py
 ```
+
+# Unit Test
+To execute the unit tests, write "pytest" in the command line.
+```
+pytest
+```
