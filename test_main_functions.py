@@ -26,6 +26,3 @@ def test_annual_salary():
     total_expected = 49333  #(24000 + 25333) Sum of the expected gross annual salaries of employees from Alovera
     result = annual_salary(data_f)
     assert result == total_expected
-
-
-

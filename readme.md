@@ -1,50 +1,50 @@
-# Prueba Técnica Equilibrha
+# Equilibrha Technical Test
 
-Este programa procesa un archivo CSV que contiene datos de empleados. Una vez cargados los datos en memoria realiza operaciones sobre ellos.
+This program processes a CSV file containing employee data. Once the data is loaded into memory, it performs various operations on it.
 
-## Funcionalidades
+## Features
 
-1. **Conteo de Género:**
-   El programa cuenta la cantidad de hombres y mujeres entre los empleados totales.
+1. **Gender Count:**
+   The program counts the number of men and women among the total employees.
 
-2. **Suma de Salarios (Empresa 1, Centro de Trabajo CT2):**
-   Calcula la suma del salario bruto anual de los empleados de la empresa 1 (Equilibra IT) y el centro de trabajo CT2 (Alovera).
+2. **Sum of Salaries (Company 1, Work Center CT2):**
+   It calculates the sum of the gross annual salary of employees from company 1 (Equilibra IT) and work center CT2 (Alovera).
 
-3. **Listado de Empleados Relevantes (Empresa 2, Salario > 28000):**
-   Imprime un listado de empleados que cobren más de 28000 euros y pertenezcan a la empresa 2 (Equilibra RRHH). Muestra su ID, nombre, apellidos, salario y empresa.
+3. **List of Relevant Employees (Company 2, Salary > 28000):**
+   It prints a list of employees who earn more than 28000 euros and belong to company 2 (Equilibra RRHH). It displays their ID, name, last name, salary, and company.
 
-## Instalación de Dependencias
+## Dependency Installation
 
 ### Windows
 
-1. Crea un entorno de Python:
+1. Create a Python environment:
     ```
     python -m venv environment
     ```
 
-2. Activa el entorno:
+2. Activate the environment:
     ```
     environment\Scripts\activate
     ```
 
-3. Instala los requisitos:
+3. Install the requirements:
     ```
     pip install -r requirements.txt
     ```
 
 ### macOS y Linux
 
-1. Crea un entorno de Python:
+1. Create a Python environment:
     ```
     python -m venv environment
     ```
 
-2. Activa el entorno:
+2. Activate the environment:
     ```
     source entorno/bin/activate
     ```
 
-3. Instala los requisitos:
+3. Install the requirements:
     ```
     pip install -r requirements.txt
     ```
