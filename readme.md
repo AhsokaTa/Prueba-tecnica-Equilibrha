@@ -41,7 +41,7 @@ This program processes a CSV file containing employee data. Once the data is loa
 
 2. Activate the environment:
     ```
-    source entorno/bin/activate
+    source environment/bin/activate
     ```
 
 3. Install the requirements:
@@ -49,3 +49,7 @@ This program processes a CSV file containing employee data. Once the data is loa
     pip install -r requirements.txt
     ```
 
+# Run the program
+```
+python main.py
+```
