@@ -33,11 +33,16 @@ class DataLoader:
             raise
 
 class EmployeeHandler:
+    
     """
     A class to handle employees.
     Attributes:
         data_f (DataFrame): The DataFrame containing employee data.
     """
+    
+    COMPANY_NAME_EQUILIBRHA_RRHH = 2
+    WORK_CENTER_ALOVERA = 1
+    SALARY_LIMIT = 28000
 
     def __init__(self, data_f : DataFrame):
         """                   
@@ -71,7 +76,7 @@ class EmployeeHandler:
                 float: Containing total annual salary of employees
         """
         try:
-            selected_employees = self.data_f[(self.data_f['ID Empresa'] == 1) & (self.data_f['Nombre centro trabajo'] == 'Alovera')]
+            selected_employees = self.data_f[(self.data_f['ID Empresa'] == self.WORK_CENTER_ALOVERA) & (self.data_f['Nombre centro trabajo'] == 'Alovera')]
             tot_salary = selected_employees['salario bruto anual'].sum()
 
             return tot_salary
@@ -82,12 +87,12 @@ class EmployeeHandler:
 
     def get_employees_RRHH(self) -> DataFrame:
         """
-            Get employee data for HR employees with a gross annual salary over 28000.
+            Get employee data for HR employees with a gross annual salary over SALARY_LIMIT.
             Returns:
-                DataFrame: Containing employee data for HR employees with a gross annual salary over 28000.
+                DataFrame: Containing employee data for HR employees with a gross annual salary over SALARY_LIMIT.
         """
         try:
-            selected_employees = self.data_f[(self.data_f['salario bruto anual'] > 28000) & (self.data_f['ID Empresa'] == 2)]
+            selected_employees = self.data_f[(self.data_f['salario bruto anual'] > self.SALARY_LIMIT) & (self.data_f['ID Empresa'] == self.COMPANY_NAME_EQUILIBRHA_RRHH)]
             selected_columns = ['id empleado', 'nombre', 'apellido1', 'apellido2', 'salario bruto anual', 'Nombre empresa']
             select_data = selected_employees[selected_columns]
 
