@@ -9,7 +9,7 @@ class DataLoader:
         FILE_NAME (str) :  The csv name to load
     """
 
-    def __init__(self, FILE_NAME):
+    def __init__(self, FILE_NAME : str):
         """
         Initializes DataLoader instance.
         
@@ -18,7 +18,7 @@ class DataLoader:
         """
         self.FILE_NAME = FILE_NAME
 
-    def load_data(self):
+    def load_data(self) -> DataFrame:
         """
         Load data from the CSV file.
         
@@ -39,7 +39,7 @@ class EmployeeHandler:
         data_f (DataFrame): The DataFrame containing employee data.
     """
 
-    def __init__(self, data_f):
+    def __init__(self, data_f : DataFrame):
         """                   
             Initializes the EmployeeHandler instance
         Args:
@@ -47,7 +47,7 @@ class EmployeeHandler:
         """          
         self.data_f = data_f
 
-    def count_gender(self):
+    def count_gender(self) -> tuple :
         """
             Count the number of men and women in the DataFrame.
             Returns :
@@ -63,7 +63,7 @@ class EmployeeHandler:
             print("An error occurred during count_gender function:", str(e))
             raise
 
-    def annual_salary(self):
+    def annual_salary(self) -> float:
         """
             Calculate the total annual salary of employees.
 
@@ -80,7 +80,7 @@ class EmployeeHandler:
             print("An error occurred during annual_salary function:", str(e))
             raise
 
-    def get_employees_RRHH(self):
+    def get_employees_RRHH(self) -> DataFrame:
         """
             Get employee data for HR employees with a gross annual salary over 28000.
             Returns:
@@ -97,7 +97,7 @@ class EmployeeHandler:
             print("An error occurred during get_employees_RRHH function:", str(e))
             raise
     
-    def print_results (self): 
+    def print_results (self) -> None: 
         """
             Print the analysis results for employees.
 
@@ -121,4 +121,3 @@ if __name__ == "__main__":
     employee = EmployeeHandler(data_f)
 
     employee.print_results()
-    
