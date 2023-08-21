@@ -1,0 +1,1 @@
+FILE_NAME = 'datos_prueba_tecnica.csv'
