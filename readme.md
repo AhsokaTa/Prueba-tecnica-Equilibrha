@@ -36,7 +36,7 @@ This program processes a CSV file containing employee data. Once the data is loa
 
 1. Create a Python environment:
     ```
-    python -m venv environment
+    python3 -m venv environment
     ```
 
 2. Activate the environment:
@@ -46,10 +46,10 @@ This program processes a CSV file containing employee data. Once the data is loa
 
 3. Install the requirements:
     ```
-    pip install -r requirements.txt
+    pip3 install -r requirements.txt
     ```
 
 # Run the program
 ```
-python main.py
+python3 main.py
 ```
