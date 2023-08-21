@@ -1,6 +1,17 @@
+"""
+===========================================================================================================
+Encapsulate code into classes. One class for loading data, and another class to handle employee operations.
+===========================================================================================================
+"""
+
 from pandas import read_csv, DataFrame
 from config import FILE_NAME
 
+"""
+======================
+class for loading data
+======================
+"""
 def load_data (FILE_NAME : str) -> DataFrame : 
     """
     Load data from a CSV file into a DataFrame.
@@ -16,6 +27,11 @@ def load_data (FILE_NAME : str) -> DataFrame :
         print ("An error occurred during load_data function:", str(e))
         raise 
 
+"""
+======================
+class to handle employee operations
+======================
+"""
 def count_gender (data_f : DataFrame) -> tuple:
     """
     Count the number of men and women in the DataFrame.
@@ -24,9 +40,9 @@ def count_gender (data_f : DataFrame) -> tuple:
     Returns :
         Tuple : containing the count of men and women in the DataFrame
     """
-
+    
     try :    
-        count_of_men = (data_f['sexo'] == 'H').sum() #count the total quantity when the value in the 'sexo' column is 'H'
+        count_of_men = (data_f['sexo'] == 'H').sum() 
         count_of_women = (data_f['sexo'] == 'M').sum()
 
         return (count_of_men, count_of_women)
@@ -70,6 +86,7 @@ def get_employees_RRHH(data_f : DataFrame) -> DataFrame:
         print("An error occurred during get_employees_RRHH function:", str(e))
         raise      
 
+
 data_frame = load_data(FILE_NAME)
 count_men, count_women = count_gender(data_frame)
 total_salary = annual_salary(data_frame)
@@ -80,3 +97,14 @@ print("Number of Women:", count_women)
 print(f"Total gross annual salary: {total_salary:.2f} €")
 print("HR Employees:")
 print(employees_hhrr)
+
+
+"""
+def count_gender_version(data_f):
+    unique_genders = set(data_f['sexo'])  
+    data_f['sexo'].to_list()
+    for item in list :
+        &%$%&"$%%%    
+    return count_of_men, count_of_women
+
+"""
