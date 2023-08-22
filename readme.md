@@ -50,6 +50,11 @@ This program processes a CSV file containing employee data. Once the data is loa
     ```
 
 # Run the program
+# Windows 
+```
+python main.py
+```
+# macOS y Linux
 ```
 python3 main.py
 ```
