@@ -1,5 +1,5 @@
 from pandas import read_csv, DataFrame
-from config import FILE_NAME
+from config import Config
 
 class DataLoader:
     """
